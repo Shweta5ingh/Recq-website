@@ -9,78 +9,41 @@ import { Facebook, Twitter, Instagram, LocationOn, Phone } from '@mui/icons-mate
 
 const Navbar = () => {
   return (
-    <div>
-      <AppBar position="static" color='primary'>
-        <Toolbar>
-          <Typography>
-            <Grid container alignItems="center" spacing={1} style={{ padding: '10px' }}>
-              <Grid item style={{ color: 'white' }}><LocationOn /></Grid>
-              <Grid item><Typography variant="subtitle1" >123 Main Street, City, Country</Typography></Grid>
-              <Grid item style={{ color: 'white' }}><Phone /></Grid>
-              <Grid item><Typography variant="subtitle1">+1234567890</Typography></Grid>
-            </Grid>
-          </Typography>
-          <IconButton
-            edge="end"
-            aria-label="Facebook"
-            color="inherit"
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ marginLeft: 'auto' }}
-          >
-            <Facebook />
-          </IconButton>
-          <IconButton
-            edge="end"
-            aria-label="Twitter"
-            color="inherit"
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Twitter />
-          </IconButton>
-          <IconButton
-            edge="end"
-            aria-label="Instagram"
-            color="inherit"
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <AppBar position="static" style={{ backgroundColor: 'black' }}>
-        <Toolbar >
-          <Link to="/">
-            <img src='images/logo.png' alt="Logo" style={{ maxHeight: '50px', marginRight: '20px', marginTop: '5px' }} />
-          </Link>
-          <ButtonGroup sx={{marginLeft:'auto'}}>
-          <Button color="inherit" component={Link} to="/" style={{ textDecoration: 'none', color: 'inherit', backgroundColor:'ActiveBorder' }}>
-            Home
-          </Button>
-          <Button color="inherit" component={Link} to="/about" style={{ textDecoration: 'none', color: 'inherit', backgroundColor:'ActiveBorder' }}>
-            About Us
-          </Button>
-          <Button color="inherit" component={Link} to="/services" style={{ textDecoration: 'none', color: 'inherit', backgroundColor:'steelblue' }}>
-            Our Services
-          </Button>
-          <Button color="inherit" component={Link} to="/contact" style={{ textDecoration: 'none', color: 'inherit', backgroundColor:'steelblue' }}>
-            Contact Us
-          </Button>
-          <Button color="inherit" component={Link} to="/blog" style={{ textDecoration: 'none', color: 'inherit', backgroundColor:'steelblue' }}>
-            Blog
-          </Button>
-          </ButtonGroup>
-        </Toolbar>
-      </AppBar>
+    <>
+    <div className="top-bar">
+      <div className="container">
+        <div className="top-in">
+          <div className="top-left">
+            <Typography><LocationOn /> Global Business Park, MG Road, Gurugram</Typography>
+            <Typography><Phone/> +1234567890</Typography>
+          </div>
+          <div className="top-right">
+            <IconButton href="https://www.facebook.com/" target="_blank"><Facebook /></IconButton>
+            <IconButton href="https://twitter.com/" target="_blank"><Twitter /></IconButton>
+            <IconButton href="https://www.instagram.com/" target="_blank"><Instagram /></IconButton>
+          </div>
+        </div>
+      </div>
     </div>
+    <div className="main-header">
+      <div className="container">
+        <div className="top-bt">
+          <div className="logo-sec">
+           <Link className='logo' to="/"><img src='images/logo.png' alt="Logo" /> </Link>
+          </div>
+          <div className="top-links">
+            <Link className='mneu-item' to="/">Home</Link>
+            <Link className='mneu-item' to="/about">About Us</Link>
+            <Link className='mneu-item' to="/#">Our Solutions</Link>
+            <Link className='mneu-item' to="/contact">Contact Us</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+    </>
   );
-};
 
+};
 export default Navbar;
 
 
