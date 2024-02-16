@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {padding: 0px;margin: 0px;background: #fff;}
+body *{font-family: 'Montserrat', sans-serif;}
+@media (min-width: 576px) {.container {max-width: 540px;}}
+@media (min-width: 768px) {.container {max-width: 720px;}}
+@media (min-width: 992px) {.container {max-width: 960px;}}
+@media (min-width: 1200px) {.container {max-width: 1200px;}}
+.container {width: 100%;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;}
+.top-bar {background: #0068b9;color: #fff;padding: 5px 0px;}
+.top-in {display: flex;justify-content: space-between;align-items: center;}
+.top-left {display: flex; align-items: center; justify-content: center;}
+.top-left p {display: flex; font-size: 14px;align-items: center;margin-right: 20px;}
+.top-left svg {font-size: 16px;margin-right: 10px;}
+.top-right a svg {font-size: 20px;color: #fff;}
+
+.main-header {padding: 15px 0px;}
+.top-bt {display: flex;justify-content: space-between; align-items: center;}
+a.logo {display: inline-block;float: left;}
+a.logo img {max-width: 200px;float: left;}
+.top-links a {color: #454545;text-decoration: none;padding: 0px 15px;font-weight: 500;}
+.top-links a:hover {color:#0068b9;}
+.top-links a:last-child {padding-right: 0px;}
+
+.banner {position: relative;}
+.banner .banner-item > img {width: 100%;}
+.banner-cap {display: flex;color: #fff;background: rgba(0, 0, 0, 0.3);    position: absolute;top: 0px;width: 100%;height: 100%;align-items: center;text-align: left;}
+.banner-item button{color: #fff; position: absolute; top: 50%; z-index: 1;width: 40px;}
+.cap-box h3 {font-size: 34px; font-weight: 700;}
+.cap-box h5 {font-size: 16px;margin: 10px 0px 20px;}
+.cap-box a {font-weight: 500; background: #fff; text-decoration: none;padding: 15px 40px; display: inline-block;border-radius: 40px;}
+
+.our-service {padding: 40px 0px; text-align: center;}
+.tile {display: inline-block;width: 100%;margin-bottom: 40px;}
+.small-title {color: #282828;font-family: "Poppins", Sans-serif;font-size: 19px;font-weight: 500;}
+.main-title {color: #282828;font-family: "Poppins", Sans-serif;font-size: 45px;font-weight: bold;}
+h3.image-box-title {margin-bottom: 20px;color: #303030;font-family: "Poppins", Sans-serif;font-size: 20px;font-weight: 600;min-height: 60px;
+margin: 0px;}
+.image-box-description {color: #494848;font-family: "Poppins", Sans-serif;font-size: 17px;font-weight: 300;}

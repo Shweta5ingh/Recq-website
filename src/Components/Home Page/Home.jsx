@@ -2,88 +2,99 @@ import React from 'react';
 import { useState } from 'react';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
-import { Typography, Paper, Button, IconButton, Grid, TextField } from '@mui/material';
+import { Typography, Paper, Button, IconButton, Grid, TextField, Link } from '@mui/material';
 
 //import {Carousel} from 'react-responsive-carousel';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
-
 
 const items = [
   {
     name: 'Item 1',
     description: 'Description for Item 1',
-    image: 'images/image2.png',
+    image: 'images/slider1.jpg',
+    link:'/#'
+
   },
   {
     name: 'Item 2',
     description: 'Description for Item 2',
-    image: 'images/image1.jpg',
+    image: 'images/slider2.jpg',
+    link:'/#'
   },
   {
     name: 'Item 3',
     description: 'Description for Item 3',
-    image: 'images/images.jpg',
+    image: 'images/slider1.jpg',
+    link:'/#'
   },
 ];
 
-
-
 const Home = () => {
-
-
   const [currentItem, setCurrentItem] = useState(0);
-
   const handlePrev = () => {
     setCurrentItem((prev) => (prev === 0 ? items.length - 1 : prev - 1));
   };
-
   const handleNext = () => {
     setCurrentItem((prev) => (prev === items.length - 1 ? 0 : prev + 1));
   };
-
-
-const imageStyle = {
-  width: '100%',
-  height: '600px',
-  position: 'relative',
-};
-
-const overlayStyle = {
-  position: 'absolute',
-  top: '50%',
-  transform: 'translateY(-50%)',
-  width: '100%',
-  display: 'flex',
-  justifyContent: 'center',
-  textAlign: 'center',
-  color: '#fff', // Text color on top of the image
-};
-
   return (
-    <div className='home-container' style={{ display: 'flex', flexDirection: 'column', minHeight: '80vh', overflow:'hidden' }}>
-      <Navbar />
-     
-      <div style={{ padding: '10px', backgroundColor: 'black', maxWidth: '2200px', position: 'relative' }}>
-      <img src={items[currentItem].image} alt={items[currentItem].name} style={imageStyle} />
-      <div style={{ ...overlayStyle, background: 'rgba(0,0,0,0.3)', padding: '20px', width:'1445px' }}>
-        <div>
-          <Typography variant="h4">{items[currentItem].name}</Typography>
-          <Typography variant="body1">{items[currentItem].description}</Typography>
+<>
+    <Navbar />
+    <div className="banner">
+      <div className="banner-item">
+        <img src={items[currentItem].image}  alt={items[currentItem].name}/>
+        <div className='banner-cap'>
+          <div className="container cap-box">
+            <Typography variant="h3">{items[currentItem].name}</Typography>
+            <Typography variant="h5">{items[currentItem].description}</Typography>
+            <Link href= {items[currentItem].link}>Read More</Link>
+            </div>
         </div>
+        <IconButton aria-label="previous" style={{left: 20}} onClick={handlePrev}><ArrowBack /></IconButton>
+        <IconButton aria-label="next" style={{right: 20}} onClick={handleNext}><ArrowForward /></IconButton>
       </div>
-      <IconButton aria-label="previous" style={{ color: 'white', position: 'absolute', left: 20, top: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }} onClick={handlePrev}>
-        <ArrowBack />
-      </IconButton>
-      <IconButton aria-label="next" style={{ color: 'white', position: 'absolute', right: 20, top: '50%', transform: 'translate(50%, -50%)', zIndex: 1 }} onClick={handleNext}>
-        <ArrowForward />
-      </IconButton>
-      </div> 
-
-      <Paper elevation={3} style={{ padding: '20px', maxWidth: '1500px', height: '400px' }}>
-        {/* Content including text and images */}
-        <Typography variant="h4" gutterBottom paragraph style={{ textAlign: 'center' }}>
-          Our Services
-        </Typography>
+    </div>
+    <div className='our-service'>
+      <div className="container">
+        <div className="tile">
+          <div className="small-title">Features</div>
+          <div className="main-title">Best Features Ever</div>
+        </div>
+        <Grid container spacing={2} className='features'>
+          <Grid item xs={12} md={3}>
+              <img src="images/feature-img5.png" alt="Example" />
+              <div class="elementor-image-box-content">
+                <h3 class="image-box-title">Automated Communication</h3>
+                <p class="image-box-description">Lorem ipsum dolor amet, consec adipisicing elit, sdo eiuscididunut labore dolore magna.</p>
+              </div>
+          </Grid>
+          <Grid item xs={12} md={3}>
+              <img src="images/feature-img5.png" alt="Example" />
+              <div class="elementor-image-box-content">
+                <h3 class="image-box-title">Track Payments</h3>
+                <p class="image-box-description">Lorem ipsum dolor amet, consec adipisicing elit, sdo eiuscididunut labore dolore magna.</p>
+              </div>
+          </Grid>
+          <Grid item xs={12} md={3}>
+              <img src="images/feature-img5.png" alt="Example" />
+              <div class="elementor-image-box-content">
+                <h3 class="image-box-title">Compliance supported debt Collection</h3>
+                <p class="image-box-description">Lorem ipsum dolor amet, consec adipisicing elit, sdo eiuscididunut labore dolore magna.</p>
+              </div>
+          </Grid>
+          <Grid item xs={12} md={3}>
+              <img src="images/feature-img5.png" alt="Example" />
+              <div class="elementor-image-box-content">
+                <h3 class="image-box-title">BI Generated Reports & Analytics </h3>
+                <p class="image-box-description">Lorem ipsum dolor amet, consec adipisicing elit, sdo eiuscididunut labore dolore magna.</p>
+              </div>
+          </Grid>
+      </Grid>
+      </div>
+    </div>    
+  
+    <div className='home-container' style={{ display: 'flex', flexDirection: 'column', minHeight: '80vh', overflow:'hidden' }}>
+    <Paper>
         <Typography variant="body1" paragraph style={{ textAlign: 'center' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat massa quis nibh convallis, sit amet congue libero faucibus.
         </Typography>
@@ -91,7 +102,15 @@ const overlayStyle = {
         <Typography variant="body1" paragraph style={{ textAlign: 'center' }}>
           Sed sodales, lorem eget euismod porttitor, nisl nunc vestibulum lorem, nec aliquam ipsum justo nec quam. Integer ac tempor magna.
         </Typography>
+        {/* <div className="elementor-shape elementor-shape-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path class="elementor-shape-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+          c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+          c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+        </svg> 
+      </div> */}
       </Paper>
+      
 
 
       <Grid container spacing={2} style={{ padding: '30px', backgroundColor: 'black' }}>
@@ -178,6 +197,7 @@ const overlayStyle = {
     </Grid>
       <Footer />
     </div>
+    </>
   );
 };
 
