@@ -1,7 +1,12 @@
 import React from 'react';
 import {Container, Typography, Grid, } from '@mui/material'
+import '/src/index.css'
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
+
+
+
+
 
 const Services = () => {
   return (
@@ -37,13 +42,29 @@ const Services = () => {
         </Grid>
       </Grid>
     </Container>
+    
 
-    <Container maxWidth="xl" >
-         hello
-    </Container>
+    <div className="video-container">
+      <div className="video-wrapper">
+        {/* Video Player */}
+        <div className="video-player">
+          {/* Stylish Play Button */}
+          <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener noreferrer" className="play-button"></a>
+        </div>
+      </div>
+      {/* Experience Title */}
+      <h2 className="experience-title">Experience</h2>
+      {/* Content */}
+      <p className="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tristique magna eu ultricies semper. Fusce vitae blandit lorem.
+      </p>
+      {/* Watch More Button */}
+      <a href="https://www.youtube.com/channel/YOUR_CHANNEL" target="_blank" rel="noopener noreferrer" className="watch-more-button">
+        Watch More
+      </a>
+    </div>
 
-
-      
+    
       <Footer/>
     </div>
   )

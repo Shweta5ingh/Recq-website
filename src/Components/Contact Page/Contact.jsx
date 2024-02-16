@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Container, Typography, Button, Grid, TextField} from '@mui/material'
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
 import {LocationOn, Email, Phone} from '@mui/icons-material';
 
 const Contact = () => {
+
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar/>
