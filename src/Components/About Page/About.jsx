@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Paper } from '@mui/material'
+import { Typography, Grid, Paper, Card, CardContent } from '@mui/material'
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
 
@@ -9,26 +9,43 @@ const About = () => {
 
       <Navbar />
 
-      <Grid container spacing={2} style={{ padding: '30px', backgroundColor: '#c2c2c2', maxWidth: '100%', overflowX: 'hidden', marginTop: 0, marginLeft: 0 }}>
-        {/* Text */}
-        <Grid item xs={12} md={6} style={{ padding: '40px' }}>
-          <Paper elevation={3} style={{ padding: '20px', height: '100%' }}>
-            <Typography variant="h4" gutterBottom>
-              Lorem Ipsum
+  
+      <Grid container spacing={2} style={{backgroundImage:'url(images/background.png)', marginTop:0}}>
+      {/* First Card */}
+      <Grid item xs={12} style={{margin:'30px'}}>
+        <Card>
+          <CardContent>
+            <Typography variant="h5">
+              Recht Tech Private Limited (RECQARZ) takespride in delivering exceptional legal and consulting services in India. 
+              We ensure to abide by our core competencies of startegic business advisory, seamless business establishment, and realistic everyday solutions.
             </Typography>
-            <Typography variant="body1" paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat massa quis nibh convallis, sit amet congue libero faucibus.
-            </Typography>
-            <Typography variant="body1">
-              Sed sodales, lorem eget euismod porttitor, nisl nunc vestibulum lorem, nec aliquam ipsum justo nec quam. Integer ac tempor magna.
-            </Typography>
-          </Paper>
-        </Grid>
-        {/* Image */}
-        <Grid item xs={12} md={6}>
-          <img src="images/image2.png" alt="Example" style={{ width: '100%', height: 'auto' }} />
-        </Grid>
+          </CardContent>
+        </Card>
       </Grid>
+
+      {/* Second Card */}
+      <Grid item xs={12} style={{margin:'30px'}}>
+        <Card>
+          <CardContent>
+            <Typography variant="h5">
+              Our unconventional ethos, client-centeredness, innovative approaches and solutions define our reputation as the leaders of our industry. 
+              Considering the evolution of the 'new normal,' our cutting edge legal services outperform the traditional methodologies.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+
+      {/* Third Card */}
+      <Grid item xs={12} style={{margin:'30px'}}>
+        <Card>
+          <CardContent>
+            <Typography variant="h5">
+              Our mantra of Experience, Ethics, and Execellence positions as the pioneers of the industry.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
 
       
 

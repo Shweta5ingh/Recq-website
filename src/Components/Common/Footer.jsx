@@ -14,7 +14,8 @@ const Footer = () => {
               About Us
             </Typography>
             <Typography variant="body1" paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat massa quis nibh convallis, sit amet congue libero faucibus.
+            Recht Tech Private Limited (RECQARZ) takespride in delivering exceptional legal and consulting services in India. 
+            We ensure to abide by our core competencies of startegic business advisory, seamless business establishment, and realistic everyday solutions.
             </Typography>
           </Grid>
           {/* Second Content Row */}
@@ -23,13 +24,14 @@ const Footer = () => {
               Collections
             </Typography>
             <Typography variant="body1" paragraph>
+              Content will be updated soon. 
               Sed sodales, lorem eget euismod porttitor, nisl nunc vestibulum lorem, nec aliquam ipsum justo nec quam. Integer ac tempor magna.
             </Typography>
           </Grid>
           {/* Third Content Row with Inputs and Button */}
           <Grid item xs={4} style={{ color: 'white' }}>
             <Typography variant="h5" gutterBottom>
-              Third Row
+              
             </Typography>
             
             <form style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', padding: '20px', borderRadius: '8px' }}>
