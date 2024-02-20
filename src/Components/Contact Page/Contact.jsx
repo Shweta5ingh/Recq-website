@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Container, Typography, Button, Grid, TextField} from '@mui/material'
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
 import {LocationOn, Email, Phone} from '@mui/icons-material';
 
 const Contact = () => {
+
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar/>
-
-
+      
       <Container>
       <Grid container spacing={3} style={{marginTop:'10px'}}>
         {/* Form */}
@@ -81,8 +82,9 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Grid>
-      
+
     </Container>
+  
       <Footer/>
     </div>
   )

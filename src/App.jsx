@@ -5,8 +5,7 @@ import Home from './Components/Home Page/Home';
 //import Navbar from './Components/Common/Navbar';
 import About from './Components/About Page/About';
 import Contact from './Components/Contact Page/Contact';
-import Services from './Components/Services Page/Services';
-import Blog from './Components/Blog/Blog';
+import Solutions from './Components/Solutions Page/Solutions';
 
 const App = () => {
   return (
@@ -14,9 +13,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/solutions' element={<Solutions/>}/>
         <Route path='/contact' element={<Contact/>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/blog' element={<Blog/>} />
       </Routes>
     </Router>
     
