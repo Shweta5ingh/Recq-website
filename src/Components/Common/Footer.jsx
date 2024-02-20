@@ -6,7 +6,7 @@ const Footer = () => {
     <AppBar position="static" color="primary">
 
 
-      <Grid container spacing={2} style={{ padding: '50px', backgroundColor: 'black', marginLeft: 0, width: '1505px', marginTop: 0 }}>
+      <Grid container spacing={2} style={{ padding: '50px', backgroundColor: 'black', marginLeft: 0, width: '1520px', marginTop: 0 }}>
         <Grid container item xs={12} spacing={2} alignItems="center">
           {/* First Content Row */}
           <Grid item xs={4} style={{ color: 'white' }}>

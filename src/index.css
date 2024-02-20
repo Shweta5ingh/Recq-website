@@ -33,7 +33,10 @@ a.logo img {max-width: 200px;float: left;}
 .our-service {padding: 40px 0px; text-align: center;}
 .tile {display: inline-block;width: 100%;margin-bottom: 40px;}
 .small-title {color: #282828;font-family: "Poppins", Sans-serif;font-size: 19px;font-weight: 500;}
-.main-title {color: #282828;font-family: "Poppins", Sans-serif;font-size: 45px;font-weight: bold;}
+.main-title {color: #282828;font-family: "Poppins", Sans-serif;font-size: 45px;font-weight: bold; text-align: center;}
 h3.image-box-title {margin-bottom: 20px;color: #303030;font-family: "Poppins", Sans-serif;font-size: 20px;font-weight: 600;min-height: 60px;
 margin: 0px;}
 .image-box-description {color: #494848;font-family: "Poppins", Sans-serif;font-size: 17px;font-weight: 300;}
+.hide {
+    display: none;
+  }

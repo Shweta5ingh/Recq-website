@@ -10,8 +10,7 @@ const Contact = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar/>
-
-
+      
       <Container>
       <Grid container spacing={3} style={{marginTop:'10px'}}>
         {/* Form */}
@@ -83,8 +82,9 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Grid>
-      
+
     </Container>
+  
       <Footer/>
     </div>
   )

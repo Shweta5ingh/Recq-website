@@ -8,7 +8,7 @@ import Footer from '../Common/Footer';
 
 
 
-const Services = () => {
+const Solutions = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar/>
@@ -70,4 +70,4 @@ const Services = () => {
   )
 }
 
-export default Services;
+export default Solutions;

@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="top-links">
             <Link className='mneu-item' to="/">Home</Link>
             <Link className='mneu-item' to="/about">About Us</Link>
-            <Link className='mneu-item' to="/#">Our Solutions</Link>
+            <Link className='mneu-item' to="/solutions">Our Solutions</Link>
             <Link className='mneu-item' to="/contact">Contact Us</Link>
           </div>
         </div>
@@ -45,5 +45,4 @@ const Navbar = () => {
 
 };
 export default Navbar;
-
 
